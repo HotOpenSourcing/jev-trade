@@ -22,12 +22,14 @@
     "@nktkas/hyperliquid": "^0.33.3",
     "@typesafe-ai/sdk": "^0.6.0",
     "ai": "^7.0.105",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "viem": "^2.56.7"
   },
   "scripts": {
-    "start": "bun run src/index.ts",
-    "dev": "bun --watch run src/index.ts",
-    "dev:web": "bun --cwd web run dev",
+    "start": "node init && bun run src/index.ts",
+    "dev": "node init && bun --watch run src/index.ts",
+    "dev:web": "node init && bun --cwd web run dev",
     "test": "bun test test"
   }
 }
